@@ -1,5 +1,7 @@
 import Head from "next/head";
+import Link from "next/link";
 import Header from "../components/Header";
+import clsx from "clsx";
 
 export default function Index() {
   return (
@@ -16,11 +18,60 @@ export default function Index() {
       </Head>
       <Header />
       <div
-        style={{ backgroundImage: "url(bg.webp)" }}
-        className="flex bg-cover bg-center bg-no-repeat flex-grow border-2"
+        style={{ backgroundImage: "url('bg-min.png')" }}
+        className={clsx(
+          "flex",
+          "bg-cover",
+          "bg-center",
+          "flex-grow",
+          "border-2",
+          // "bg-[url('bg-min.png')]",
+          "bg-no-repeat",
+          // "bg-profile",
+        )}
       >
-        <div className="flex items-center justify-center flex-grow max-w-[50%]">
-          Content goes Here
+        <div
+          className={clsx(
+            "flex",
+            "items-center",
+            "justify-center",
+            "max-w-[50%]",
+          )}
+        >
+          <div className={clsx("px-7")}>
+            <h1
+              className={clsx(
+                "font-bold",
+                "capitalize",
+                "text-[3rem]",
+                "leading-tight",
+                "text-sky-600",
+                "mb-8",
+              )}
+            >
+              I'm web developer, Khalid Moussaid
+            </h1>
+            <p
+              className={clsx(
+                "mb-9",
+                "text-[16px]",
+                "leading-8",
+                "font-normal",
+              )}
+            >
+              jhorem rfpsum golor sidt amet, consectetur adipiscing elit,
+              eiusmod tempor incididunt utcjhg labore bet dolore magna aliqua.
+              Quis ipsum suspendisse ultrices gravida.
+            </p>
+
+            <div className={clsx("flex", "justify-around")}>
+              <div className="flex items-center">
+                <div className="rounded transition hover:bg-sky-600 bg-sky-500 py-2 px-3 text-white capitalize font-medium ">
+                  <Link href="#contact">Hire me</Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
