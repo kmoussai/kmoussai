@@ -31,19 +31,21 @@ export default function Index() {
         )}
       >
         <div
+          style={{ maxWidth: "50%" }}
           className={clsx(
             "flex",
             "items-center",
             "justify-center",
-            "max-w-[50%]",
+            // "max-w-[50%]",
           )}
         >
           <div className={clsx("px-7")}>
             <h1
+              style={{ fontSize: "3rem" }}
               className={clsx(
                 "font-bold",
                 "capitalize",
-                "text-[3rem]",
+                // "text-[3rem]",
                 "leading-tight",
                 "text-sky-600",
                 "mb-8",
@@ -52,9 +54,10 @@ export default function Index() {
               I'm web developer, Khalid Moussaid
             </h1>
             <p
+              style={{ fontSize: "16px" }}
               className={clsx(
                 "mb-9",
-                "text-[16px]",
+                // "text-[16px]",
                 "leading-8",
                 "font-normal",
               )}
