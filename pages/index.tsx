@@ -18,13 +18,14 @@ export default function Index() {
       </Head>
       <Header />
       <div
-        style={{ backgroundImage: "url('bg-min.png')" }}
+        style={{ backgroundImage: "url('bg.webp')" }}
         className={clsx(
           "flex",
+          "flex-grow",
           "bg-cover",
           "bg-center",
           "flex-grow",
-          "border-2",
+          "border-2 p-4",
           // "bg-[url('bg-min.png')]",
           "bg-no-repeat",
           // "bg-profile",
@@ -76,6 +77,35 @@ export default function Index() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div
+        className=" flex-grow-0 grid gap-3 md:grid-cols-4 p-5"
+        style={
+          {
+            // gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          }
+        }
+      >
+        {Array.from({ length: 20 }, (_, i) => `key ${i}`).map((item) => (
+          <div
+            key={item}
+            className="border rounded-md shadow-md md:hover:shadow-lg transition-all md:hover:scale-105 flex flex-col p-2"
+          >
+            <div className="flex items-center gap-1">
+              <div className="flex-grow">Title</div>
+            </div>
+            <div>Content index {item}</div>
+            <div className="flex justify-end">
+              <div
+                className="w-[25px] h-[25px] rounded-full bg-cover bg-center bg-no-repeat"
+                style={{
+                  backgroundImage: "url('nextjs.png')",
+                }}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

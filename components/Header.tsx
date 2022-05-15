@@ -5,7 +5,14 @@ import Menu from "./Menu";
 function Header() {
   return (
     <div className="flex justify-between bg-white px-4">
-      <div className="flex items-center">LOGO</div>
+      <div className="flex items-center ">
+        <div
+          className="flex items-center w-[50px] h-[50px] bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url(favicon.ico)",
+          }}
+        />
+      </div>
       <div className="flex flex-grow">
         <Menu />
         <div className="flex items-center">
