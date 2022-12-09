@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm khalid moussaid</h1>
-<h3 align="center">A passionate frontend developer from Morocoo</h3>
+<h3 align="center">A passionate frontend developer from Morocco</h3>
 
 - 💬 Ask me about **ReactJS, NextJS, Typescript**
 
