@@ -3,7 +3,7 @@
 
 - 💬 Ask me about **ReactJS, NextJS, Typescript**
 
-- 📫 How to reach me **k.moussaid@outlook.co**
+- 📫 How to reach me **k.moussaid@outlook.com**
 
 - 📄 Know about my experiences [https://drive.google.com/file/d/1-1EFPPwd1GWpcHFBWRF4mE77JQ3tgo5l/view?usp=sharing](https://drive.google.com/file/d/1-1EFPPwd1GWpcHFBWRF4mE77JQ3tgo5l/view?usp=sharing)
 
