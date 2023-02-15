@@ -3,13 +3,11 @@ import {
   AiFillLinkedin,
   AiFillTwitterCircle,
 } from "react-icons/ai";
-import { GiTie } from "react-icons/gi";
 import { GoLocation } from "react-icons/go";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 
 const Sidebar = () => {
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
 
   // const changeTheme = () => {
   //   setTheme(theme === "light" ? "dark" : "light");

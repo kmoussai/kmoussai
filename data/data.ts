@@ -1,7 +1,7 @@
 import { RiComputerLine, RiTeamFill } from "react-icons/ri";
 import { FaServer } from "react-icons/fa";
 
-import { AiOutlineAntDesign, AiOutlineApi } from "react-icons/ai";
+import { AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
 import { IProject, Service, Skill } from "../types";
 
