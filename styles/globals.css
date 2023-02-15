@@ -3,3 +3,8 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+body {
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    color: #354358;
+}

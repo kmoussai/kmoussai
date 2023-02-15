@@ -1,66 +1,52 @@
-import Mail from "../components/icons/mail";
-import Phone from "../components/icons/phone";
-import Resume from "../components/icons/resume";
-import Image from "next/image";
+import {
+  GetServerSideProps,
+  GetServerSidePropsContext,
+  GetStaticProps,
+  GetStaticPropsContext,
+  NextPage,
+} from "next";
+import ServiceCard from "../components/servicecard";
+import { services } from "../data/data";
+import { Service } from "../types";
 
-export default function Home() {
+const About: NextPage = () => {
+  // console.log(services);
+
   return (
-    <div className="flex w-screen h-screen">
-      <div className="flex pl-0 md:pl-48 flex-col flex-1 gap-4 md:gap-36">
-        <div className="flex bg-black w-full md:w-1/2 h-16 text-white p-2 md:p-2 justify-center items-end">
-          <h1 className="font-bold text-3xl ">Khalid MOUSSAID</h1>
-        </div>
-        <div className="flex flex-col pl-8 md:pl-0 pr-8">
-          <p>
-            I am a frontend developer with a passion for writing code and
-            solving problems. I have experience working with ReactJS and enjoy
-            using it to create interactive and user-friendly web applications.
-            In my free time, I enjoy staying up-to-date with the latest
-            developments in the world of frontend development and exploring new
-            technologies. I am always eager to learn and take on new challenges,
-            and I am dedicated to producing high-quality work.
-          </p>
-          <div className="flex gap-4 mt-4 flex-col">
-            <div>
-              <a
-                className="flex gap-4 items-center"
-                href="mailto:k.moussaid@outlook.com"
-              >
-                <Mail />
-                k.moussaid@outlook.com
-              </a>
-            </div>
+    <div className="flex flex-col flex-grow px-6 pt-1 ">
+      <p className="my-3 text-base font-medium">
+        I’m a Front-end developer with a proven ability to collaborate
+        effectively with senior developers, I describe myself as a passionate
+        developer who loves coding, and contributing to things that have more
+        impact on people’s lives.
+      </p>
+      <p>
+        Now I’m looking for a new experience to learn more new stuff and to grow
+        as a developer.
+      </p>
+      <div
+        className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100 "
+        style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
+      >
+        <h4 className="my-3 text-xl font-semibold tracking-wide">
+          What I am doing
+        </h4>
 
-            <div>
-              <a
-                className="flex gap-4 items-center"
-                href="tel:00212627570221"
-              >
-                <Phone />
-                +212 6 27 57 02 21
-              </a>
+        <div className="grid gap-6 my-3 md:grid-cols-2">
+          {/* children's initial and animate property should be same as the parent during a stagger effect  */}
+          {services.map((service) => (
+            <div
+              className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1 "
+              key={service.title}
+            >
+              {/* service */}
+              <ServiceCard service={service} />
             </div>
-
-            <div>
-              <a
-                className="flex gap-4 items-center"
-                href="https://drive.google.com/file/d/1-1EFPPwd1GWpcHFBWRF4mE77JQ3tgo5l/view?usp=sharing"
-              >
-                <Resume />
-                Resume
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
-      <div className="md:flex hidden">
-        <Image
-          width="700"
-          height="100"
-          src="/bg-profile.jpeg"
-          alt="kmoussai or khalid moussaid profile image"
-        />
       </div>
     </div>
   );
-}
+};
+
+export default About;
