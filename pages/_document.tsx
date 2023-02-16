@@ -5,6 +5,12 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <title>Khalid MOUSSAID portfolio</title>
+          <meta
+            name="description"
+            key={"desc"}
+            content="Skilled in React and Next.js, Khalid Moussaid crafts exceptional user experiences. Contact him today to elevate your web development projects."
+          />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
